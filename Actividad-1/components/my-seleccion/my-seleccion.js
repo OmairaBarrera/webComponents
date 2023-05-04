@@ -8,10 +8,20 @@ export default class mySeleccion extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode:'open'});
+    }
+    handleEvent(e){
+        (e.type === 'click') ? this.enviarWorker(e) : undefined;
+    }
+    enviarWorker(e){
+        console.log("MY SELECCION");
+        e.preventDefault()
+    }
+    connectedCallback(){
         Promise.resolve(mySeleccion.component()).then(html => {
             this.shadowRoot.innerHTML = html;
+            this.Myseleccion = this.shadowRoot.querySelector('button');
+            this.Myseleccion.addEventListener('click', this.handleEvent.bind(this))
         })
-        console.log('Etiqueta renderizada');
     }
 }
 

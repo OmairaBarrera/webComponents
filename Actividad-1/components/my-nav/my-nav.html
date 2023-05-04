@@ -1,5 +1,5 @@
 <nav>
-
+    <button type="submit"> nav </button>
 </nav>
 
 <style>
@@ -9,8 +9,23 @@
         box-sizing: border-box;
     }
     nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         width: 100%;
         height: calc(100vh - 400px);
         background-color: darkgreen;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+        border-radius: 25px 0 25px 0;
+        border: none;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    button:hover{
+        background-color:darkolivegreen;
     }
 </style>
