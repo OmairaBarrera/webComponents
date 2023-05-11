@@ -24,6 +24,7 @@ class myELement extends HTMLElement {
         this.p = document.createElement('p');
     }
     //todo el contenido de la clase como el componente ya es un nodo que existe en el DOM
+    //toda la funcionalidad del componente
     connectedCallback(){
         this.h1.textContent = 'Custom Element'
         this.p.textContent = 'Bienvenidos'

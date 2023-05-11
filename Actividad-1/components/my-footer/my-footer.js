@@ -8,10 +8,20 @@ export default class myFooter extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode:'open'});
+    }
+    handleEvent(e){
+        (e.type === 'click') ? this.enviarWorker(e) : undefined;
+    }
+    enviarWorker(e){
+        console.log("MY FOOTER");
+        e.preventDefault()
+    }
+    connectedCallback(){
         Promise.resolve(myFooter.component()).then(html => {
             this.shadowRoot.innerHTML = html;
+            this.Myfooter = this.shadowRoot.querySelector('button');
+            this.Myfooter.addEventListener('click', this.handleEvent.bind(this))
         })
-        console.log('Etiqueta renderizada');
     }
 }
 

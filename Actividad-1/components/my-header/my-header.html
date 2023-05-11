@@ -1,5 +1,6 @@
 <header>
     <h1> BIENVENIDOS </h1>
+    <button type="submit"> click </button>
 </header>
 
 <style>
@@ -9,16 +10,28 @@
         box-sizing: border-box;
     }
     header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
         background-color: darkblue;
         height: 200px;
         width: 100%;
     }
     h1{
-        display: flex;
-        justify-content: center;
-        padding-top: 70px;
         color: azure;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 60px;   
+    }
+    button{
+        width: 200px;
+        height: 30px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: lightskyblue;
     }
 </style>
