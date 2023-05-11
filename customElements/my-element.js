@@ -3,7 +3,6 @@
 Opcion 2
     Creamos un template y agregamos al DOM con appendChild
 */
-
 const template = document.createElement('div');
 template.innerHTML = `
     <style>
