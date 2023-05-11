@@ -8,7 +8,10 @@
 </head>
 <body>
     <h2>Hola Mundo</h2>
-    <my-element>Texto fuera del template</my-element>
+    <my-element>
+        <span slot="titulo">Titulo template</span>
+        <span slot="parrafo">Parrafo template</span>
+    </my-element>
     <!--JS-->
     <script type="module" src="./my-element.js"></script>
 </body>
